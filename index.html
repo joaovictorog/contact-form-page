@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <main class="container">
+    <form class="formulario" data-formulario>
+      <div class="formulario__titulo">
+        <h2 class="formulario__titulo-texto">Contact Us</h2>
+      </div>
+      <fieldset class="formulario__campo formulario__nome">
+        <div class="campo__nome">
+          <label class="campo__etiqueta">First Name *</label>
+          <input name="nome" id="nome" class="campo__escrita campo__escrita-menor" type="text" minlength="3" required/>
+          <span class="mensagem-erro"></span>
+        </div>
+        <div class="campo__nome">
+          <label class="campo__etiqueta">Last Name *</label>
+          <input name="sobrenome" id="sobrenome" class="campo__escrita campo__escrita-menor" type="text" minlength="3" required/>
+          <span class="mensagem-erro"></span>
+        </div>
+      </fieldset>
+      <fieldset class="formulario__campo">
+        <label class="campo__etiqueta">Email Address *</label>
+        <input name="email" id="email" placeholder="email@example.com" class="campo__escrita" type="email" minlength="4" required/>
+        <span class="mensagem-erro"></span>
+      </fieldset>
+      <fieldset class="formulario__campo">
+        <label class="campo__etiqueta">Query Type *</label>
+        <div class="campos__consulta">
+          <div class="campo__consulta" id="selecao">
+            <input id="campo-1" name="consulta" value="0" type="radio">
+            <label for="campo-1" class="campo-texto">General Enquiry</label>
+          </div>
+          <div class="campo__consulta">
+            <input id="campo-2" name="consulta" value="1" type="radio">
+            <label for="campo-2" class="campo-texto">Support Request</label>
+          </div>
+        </div>
+        <span class="mensagem-erro"></span>
+      </fieldset>
+      <fieldset class="formulario__campo">
+        <label class="campo__etiqueta">Message *</label>
+        <input name="mensagem" id="mensagem" class="campo__escrita campo-mensagem" type="text" minlength="5" required/>
+        <span class="mensagem-erro"></span>
+      </fieldset>
+      <fieldset class="formulario__contato">
+        <input id="contato" name="contato" class="contato__input campo__escrita" type="checkbox" novalidate>
+        <label for="contato" class="checkbox-texto">I consent to being contacted by the team *</label>
+        <span class="mensagem-erro"></span>
+      </fieldset>
+
+      <div class="formulario__botao">
+        <input value="Submit" class="botao" id="enviar" data-botao-enviar type="submit">
+      </div>
+    </form>
+  </main>
+
+  
+  
+  
+  <!--Contact Us
+  First Name
+  This field is required
+
+  Last Name
+  This field is required
+
+  Email Address
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+  General Enquiry
+  Support Request
+  Please select a query type
+
+  Message
+  This field is required
+
+  
+  To submit this form, please consent to being contacted
+
+  Submit
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon!-->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">João Victor</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

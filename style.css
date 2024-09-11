@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap');
+
+body {
+    background-color: hsl(148, 38%, 91%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    height: auto;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    border-radius: 1em;
+    font-family: 'Karla', sans-serif;
+}
+
+.formulario__titulo-texto {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.formulario__campo {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8em 0;
+}
+
+.campo__escrita {
+    border: 2px solid gray;
+    border-radius: 5px;
+    height: 2.5em;
+    margin-top: 0.8em;
+    padding-left: 1.5em;
+    font-size: 16px;
+    color: rgb(97, 93, 93);
+    font-weight: bold;
+}
+
+.campo__escrita:hover {
+    border-color: lightseagreen;
+    cursor: pointer;
+}
+
+.formulario__nome {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.campo__nome {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.campos__consulta {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    margin-top: 0.8em;
+}
+
+.campo__consulta {
+    display: flex;
+    border: 2px solid gray;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 10px;
+    height: 2.5em;
+    width: 50%;
+}
+
+.campo__consulta:hover {
+    cursor: pointer;
+}
+
+.campo-texto:hover {
+    cursor: pointer;
+}
+
+.campo__consulta input {
+    display: none;
+}
+
+.campo__consulta input + label:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+.campo__consulta input:checked + label:before {
+    background-color: lightseagreen;
+    box-sizing: border-box;
+    border: 5px solid lightseagreen;
+    padding: 5px;
+}
+
+.campo-texto {
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+.campo-mensagem {
+    padding-bottom: 50px;
+}
+
+.formulario__contato {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1.5em;
+}
+
+.formulario__contato input {
+    display: none;
+}
+
+.formulario__contato input + label:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 18px;
+}
+
+.formulario__contato input:checked + label:before {
+    background-color: lightseagreen;
+    box-sizing: border-box;
+    border: 5px solid lightseagreen;
+    padding: 5px;
+}
+
+.botao {
+    text-align: center;
+    width: 100%;
+    background-color: hsl(169, 82%, 27%);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+}
+
+.botao:hover {
+    background-color: hsl(187, 32%, 21%);
+    cursor: pointer;
+}
+
+.formulario__contato {
+    gap: 10px;
+}
+
+.mensagem-erro {
+    color: hsl(0, 66%, 54%);
+    font-size: 14px;
+}
+
+.active {
+    background-color: hsl(148, 38%, 91%);
+    border: 2px solid lightseagreen;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 1260px) {
+    .formulario__nome {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .campo__nome {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .container {
+        font-size: 20px;
+        margin-top: 300px;
+    }
+
+    .formulario__nome {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .campo__nome {
+        width: 100%;
+    }
+
+    .campo__escrita {
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .campos__consulta {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .campo__consulta {
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .campo-mensagem {
+        padding-bottom: 100px;
+    }
+}
